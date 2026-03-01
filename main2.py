@@ -1,7 +1,9 @@
 from pyscript import display, document
 
 def create_account(event=None): # This function is called when the "Create Account" button is clicked. It validates the username and password according to the specified criteria and displays appropriate messages.
-    document.getElementById("output").innerHTML = "" # Clear previous output messages
+     # Clears previous output messages      
+    document.getElementById("output").innerHTML = ""
+    document.getElementById("result2").innerHTML = ""
 
     username = document.getElementById("username").value # Get the value of the username input field
     password = document.getElementById("password").value # Get the value of the password input field
@@ -29,3 +31,4 @@ def create_account(event=None): # This function is called when the "Create Accou
           # Display success message with the username
          document.getElementById("print").innerHTML = f"You have successfully created your account!"
          display(f"User: {username}", target="print2")
+
